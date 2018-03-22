@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>particle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 
@@ -18,40 +19,58 @@
         <ul>
             <a href="">Home</a>
             <a href="#about">About</a>
+            <a href="fitness.html">Fitness</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
             <!-- <a href="">Articles</a> -->
         </ul>
     </nav>
 
-    <!-- <div id="particles-js"> -->
+    
+   
 
-
-    <!-- about section -->
-    <div id="about">
+    <!-- intro section -->
+    <div id="intro">
         <br><br>
         <div id="moonLeft">
-            <img src="pics/moon.svg" alt="">
+            <img src="pics/moon.svg" alt="The Cow Jumped Over the Moon">
         </div>
-        <h1>Zachary Carlin</h1>
+        <h1>Zachary <br>Carlin</h1>
         <span id="whoIs">Web Developer</span>
             <br><br><br><br>
     </div>
+
+    <div id="aboutMe">
+        <h1>About Me</h1>
+        <p>I Currently am finishing up my Associates Degree from SPC and will be transferring to USF to pursue a bachelors in Computer Science. Besides my love for Technology and learning, I have an avid passion for Health & Fitness. Here’s a Recent video of me Lifting </p> 
+        <iframe width="175" height="315" src="https://www.youtube.com/embed/t68SPwMcCyo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <p>If You're intrested in how I train you can read more  <a href="Fitness.html">here</a>
+        </p>
+    </div>
+
     <div id="skills">
+            <img src="pics/rocketship.svg" alt="">
         <h1>Skills</h1>
         <ul>
             <li>HTML</li><br>
             <li>CSS</li><br>
             <li>Javascript</li><br>
             <li>Python</li><br>
-            
+            <li>Node</li><br>
+            <li>Vue</li><br>
+            <li>Photoshop</li><br>
+            <li>Illustrator</li><br>
         </ul>
+        
     </div>
 
 
     <!-- projects section -->
-    <div id="projects"></div>
-    <a href=""></a>
+    <div id="projects">
+       
+       
+    </div>
+ 
 
     <!-- contact section -->
     <div id="contactSection" align="center">
@@ -82,6 +101,7 @@
                 <img src="pics/twitter.svg" alt="" width="50px">
             </a>
         </div>
+  
     </div>
 
 
@@ -98,7 +118,7 @@
     </script>
 
     <script>
-        var me = ["Web Developer", "Bodybuilder", "CS Student", "Dreamer"]
+        var me = ["Developer", "Bodybuilder", "CS Student", "Dreamer"]
         count = 0;
         setInterval(function () {
             count++;

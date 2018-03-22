@@ -1,9 +1,18 @@
 body {
     margin: auto;
+    font-family: 'Open Sans' , sans-serif;
+    
 }
 
+#particles-js {
+    position: absolute;
+    z-index: -1;
+    background: rgb(1, 1, 16);
+    height: 3050px;
+    width: 100%;
+}
 .navbar {
-    background: rgb(160, 160, 160);
+    background:rgba(7, 12, 19, 0.9);;
     overflow: none;
     text-decoration: none;
     position: fixed;
@@ -16,39 +25,20 @@ body {
 
 .navbar a {
     float: left;
-    color: rgb(11, 11, 39);
+    color:rgba(255, 255, 255, 0.638);
     text-align: center;
-    padding: 8px 10px 10px 10px;
+    padding: 0px 0px 0px 10px;
     font-size: 18px;
     text-decoration: none;
     border: thick;
 }
 
 .navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color:rgba(7, 12, 19, 0.5);;
+    color: rgb(255, 255, 255);
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
 }
-
-#particles-js {
-    position: absolute;
-    z-index: -1;
-    background: rgb(11, 11, 39);
-    height: 2000px;
-    width: 100%;
-}
-
-#contactSection {
-    margin: auto;
-    width: 80%;
-    color: white;
-    background: rgba(7, 12, 19, 0.5);
-    padding: 10px 10px 10px 10px;
-    position: relative;
-    align-content: center;
-}
-
 textarea {
     height: 50%;
     width: 50%;
@@ -67,7 +57,7 @@ ul {
 
 #socialMedia {}
 
-#about {
+#intro {
     margin: auto;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 36px;
@@ -75,17 +65,49 @@ ul {
     text-align: center;
     padding-right: 20px;
     top: 50%;
-    
+    max-width: 1280px;   
 }
-#panel1{
-width: 100%;
+#aboutMe{
+    margin: auto;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+     font-family: 'Open Sans' , sans-serif;
+     max-width: 400px;
+     position: relative;
+     align-content: center;
+     /* background: rgba(7, 12, 19, 0.5); */
+     padding: 20px;
 }
+
 #moonLeft {
-    
-    min-width: 350px;
+  
+    min-width: 400px;
     float: left;
+    padding-left:6px;
 }
 #skills{
+    margin: auto;
     color: white;
     font-size: 24px;
+    max-width: 800px;
+    position: relative;
+    align-content: center;
+    padding-bottom: 175px;
+    /* background: rgba(7, 12, 19, 0.5); */
+}
+
+#skills img{
+    float: right;
+    max-width: 400px;
+    position: relative;
+}
+#contactSection {
+    margin: auto;
+    width: 80%;
+    color: white;
+    /* background: rgba(7, 12, 19, 0.5); */
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    align-content: center;
 }
