@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>particle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+
+    <nav class="navbar">
+
+        <ul>
+            <a href="">Home</a>
+            <a href="#about">About</a>
+            <a href="fitness.html">Fitness</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <!-- <a href="">Articles</a> -->
+        </ul>
+    </nav>
+
+    
+   
+
+    <!-- intro section -->
+    <div id="intro">
+        <br><br>
+        <div id="moonLeft">
+            <img src="pics/moon.svg" alt="The Cow Jumped Over the Moon">
+        </div>
+        <h1>Zachary <br>Carlin</h1>
+        <span id="whoIs">Web Developer</span>
+            <br><br><br><br>
+    </div>
+
+    <div id="aboutMe">
+        <h1>About Me</h1>
+        <p>I Currently am finishing up my Associates Degree from SPC and will be transferring to USF to pursue a bachelors in Computer Science. Besides my love for Technology and learning, I have an avid passion for Health & Fitness. Here’s a Recent video of me Lifting </p> 
+        <iframe width="175" height="315" src="https://www.youtube.com/embed/t68SPwMcCyo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <p>If You're intrested in how I train you can read more  <a href="Fitness.html">here</a>
+        </p>
+    </div>
+
+    <div id="skills">
+            <img src="pics/rocketship.svg" alt="">
+        <h1>Skills</h1>
+        <ul>
+            <li>HTML</li><br>
+            <li>CSS</li><br>
+            <li>Javascript</li><br>
+            <li>Python</li><br>
+            <li>Node</li><br>
+            <li>Vue</li><br>
+            <li>Photoshop</li><br>
+            <li>Illustrator</li><br>
+        </ul>
+        
+    </div>
+
+
+    <!-- projects section -->
+    <div id="projects">
+       
+       
+    </div>
+ 
+
+    <!-- contact section -->
+    <div id="contactSection" align="center">
+        <form method="post" id="contact">
+            <h2>Contact Me.</h2>
+            <label for="name">Name</label>
+            <br>
+            <input type="text" name="name" id="name" placeholder="Elon Musk" required>
+            <br>
+            <label for="email">Email</label>
+            <br>
+            <input type="text " name="email" id="email" placeholder="ElonMusk@Going2Mars.com" required>
+            <br>
+            <label for="Message">Message</label>
+            <br>
+            <textarea name="message" id="message" cols="100" rows="10" placeholder="I need you to help me get to Mars" required></textarea>
+            <br>
+            <input type="submit" value="submit">
+        </form>
+        <div id="socialMedia">
+            <a href="https://github.com/About7Sharks" target='_blank'>
+                <img src="pics/github.svg" alt="" width="50px">
+            </a>
+            <a href="https://www.instagram.com/zachary_carlin/" target='_blank'>
+                <img src="pics/instagram.svg" alt="" width="50px">
+            </a>
+            <a href="https://twitter.com/ZacharyCarlin?lang=en" target='_blank'>
+                <img src="pics/twitter.svg" alt="" width="50px">
+            </a>
+        </div>
+  
+    </div>
+
+
+
+
+
+
+    <!-- particles.js package and load function -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('partilcles.json loaded...');
+        });
+    </script>
+
+    <script>
+        var me = ["Developer", "Bodybuilder", "CS Student", "Dreamer"]
+        count = 0;
+        setInterval(function () {
+            count++;
+            if (count >= (me.length)) {
+                count = 0;
+            }
+            document.getElementById("whoIs").innerHTML = me[count];
+        }, 3000);
+    </script>
+
+</body>
+
+</html>

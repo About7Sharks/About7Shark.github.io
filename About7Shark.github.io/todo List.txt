@@ -1,0 +1,13 @@
+add about
+project area under construction
+generally css chagnes
+change logo icons to white
+change font
+get project links working
+
+
+
+
+stuff fixed
+    make navbar go ahead of contact section
+        used a z-index: x; which specifies how content stacks
