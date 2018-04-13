@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>Vue</title>
+</head>
+<body>
+  
+       
+      <p>Weight Lifted</p><input type="number" v-model="weightLifted">
+      <p>Number of Reps</p><input type="number" v-model="numberOfReps"><br> 
+      <button v-on:click="calculate">Calculate</button><br>
+        <div id="max">
+           <p> {{result}}  </p>  
+         </div>
+    
+    
+
+    <script>
+
+
+    
+     new Vue({
+         el: '#max',
+         data: {
+             result: '0',
+             weightLifted: 0,
+             numberOfReps: 0,             
+         },
+         methods:{
+             calculate: function(){
+                this.result = Number(this.weightLifted) * (1 + (Number(this.numberOfReps)) / 30);
+             }
+         }
+     });
+    </script>
+</body>
+</html>
+
+

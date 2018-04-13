@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Useful lifting Formulas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+</head>
+
+<body>
+    <div id="max">
+        <input id="weightLifted" type="text" placeholder="Weight Lifted">
+        <input id="numberOfReps" type="text" placeholder="Number of Reps">
+        <button onclick="max()">Calculate</button>
+        <p id="output"></p>
+    </div>
+
+    <div id="wilks">
+        <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            
+        </select>
+        <br>
+        <input id="big3Total" type="text" placeholder="Big 3 Total">
+        <input id="bodyWeight" type="text" name="" placeholder="Bodyweight in Lbs">
+        <button onclick="wilks()">Calculate</button>
+        <p id="wilksScore"></p>
+        
+    </div>
+
+    <script>
+
+
+        
+        function max() {
+            var weightLifted = document.getElementById('weightLifted').value;
+            var numberOfReps = document.getElementById('numberOfReps').value;
+            var max = weightLifted * (1 + (numberOfReps / 30));
+            document.getElementById('output').innerHTML = "Your estimated 1 Rep Max is: " + max + ' Lbs';
+        }
+
+
+
+
+        function wilks() {
+           var gender = document.getElementById('gender').value;
+            if ( gender == 'male') {
+                a = -216.0475144;
+                b = 16.2606339;
+                c = -0.002388645;
+                d = -0.00113732;
+                e = 7.01863E-06;
+                f = -1.291E-08;
+            } else {
+                a = 594.31747775582;
+                b = -27.23842536447;
+                c = 0.82112226871;
+                d = -0.00930733913;
+                e = 4.731582E-05;
+                f = -9.054E-08;
+            }
+
+            var big3Total = document.getElementById('big3Total').value * 0.453592;
+            var bodyWeight = document.getElementById('bodyWeight').value * 0.453592;
+            var wilks = big3Total * (500 / (a + (b * bodyWeight) + (c * Math.pow(bodyWeight, 2)) + (d * Math.pow(bodyWeight, 3)) + (e * Math.pow(bodyWeight, 4)) + (f * Math.pow(bodyWeight, 5))));
+            document.getElementById('wilksScore').innerHTML = "Your Wilks score is: " + wilks.toFixed(2);
+
+        }
+        function bmr(){
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>
