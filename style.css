@@ -111,3 +111,15 @@ ul {
     position: relative;
     align-content: center;
 }
+#workouts tr{
+    padding: 1em;
+}
+#max{
+    padding-top: 50px;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+#wilks{
+    margin-left: 35%;
+    margin-right: 35%;
+}
