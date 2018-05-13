@@ -129,8 +129,8 @@ html * {
 #mediaBar h3{
     color: white; 
     padding-left: 10px;
-    
 }
+
 /* end of nav bars */
 #theBuilders{
     text-align: center;  
@@ -214,6 +214,11 @@ h3{
     cursor: pointer;
     /* Add a pointer on hover */
 }
+#close{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(177, 67, 67, 0.39);
+}
 
 #text {
     width: 100%;
@@ -245,8 +250,11 @@ h3{
     margin: 0 auto;
     /* background: rgba(0, 0, 0, 0.651); */
     width: 50%;
+    height: 2%;
     min-width: 150px;
     max-width: 300px;
+    padding-top: 5px;
+ 
 }
 
 .overlayVideo {
@@ -254,6 +262,46 @@ h3{
 }
 video{
     height: 100vh;
+}
+
+#feedText{
+    text-align: center;
+    min-height: 500px;
+}
+#feedText h1{
+    background: rgb(50, 49, 50);
+    color: white;
+    font-size: 2em;
+}
+#feedText h2{
+    font-size: 1.5em;
+   color: rgb(60, 122, 190);
+}
+
+#comText{
+    width:100%;
+    text-align: center;
+  
+    margin: 0 auto;
+
+}
+#comText h1{
+    background: rgb(50, 49, 50);
+    color: white;
+}
+#comText h2{
+    color: rgb(60, 122, 190);
+}
+#comText p{
+    text-align: left;
+}
+
+#mc_embed_signup{
+
+}
+#content{
+    height: 80%;
+   overflow: inherit;
 }
 
 
