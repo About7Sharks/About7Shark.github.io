@@ -1,2 +1,2 @@
 # About7Shark.github.io
-Portfolio Page
+My little corner of the web
