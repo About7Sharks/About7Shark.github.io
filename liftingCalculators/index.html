@@ -4,38 +4,138 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Useful lifting Formulas</title>
+    <title>Lifting Calculators</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 
 </head>
 
 <body>
-    <div id="max">
-        <input id="weightLifted" type="text" placeholder="Weight Lifted">
-        <input id="numberOfReps" type="text" placeholder="Number of Reps">
-        <button onclick="max()">Calculate</button>
-        <p id="output"></p>
+
+        <div id='oneRepMax'>
+            <h1>{{Title}}</h1>
+                <form>
+                     <label for="weightLifted">Weight Lifted</label>
+                     <input type="text" id="weightLifted" v-model="weightLifted">
+                    <br/>
+                     <label for="reps">Number of Reps</label>
+                    <input type="text" id="reps" v-model="reps">
+                    <br/>
+                     <label for="result">Max</label>
+                    <input type="text" id="result" v-model="result">
+                </form>
+        </div>
+        <br><br> <br>
+        <div id="wilks">
+            <form>
+                <label for="big3Total">Big 3 Total</label>
+                <input type="text" id="big3Total" v-model="big3Total"><br>
+                <label for="bodyWeight">Body Weight</label>
+                <input type="text" id="bodyWeight" v-model="bodyWeight"><br>
+                <select v-model="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+        
+                    </select>
+                <label for="result1">Wilks Score</label>
+                <input type="text" id="result1" v-model="result1">
+            </form>
+            
+        </div>
+
+
+
+        <script>
+                new Vue({
+                     el:'#wilks',
+                    data: {
+                        big3Total: '',
+                        bodyWeight: '',
+                        gender: 'Male'
+                    },
+                    computed:{
+                        result1: function(){
+                            if (this.gender == "Male") {
+                            var a = -216.0475144;
+                            var b = 16.2606339;
+                            var c = -0.002388645;
+                            var d = -0.00113732;
+                            var e = 7.01863E-06;
+                            var f = -1.291E-08;
+                            } else {
+                            var a = 594.31747775582;
+                            var b = -27.23842536447;
+                            var c = 0.82112226871;
+                            var d = -0.00930733913;
+                            var e = 4.731582E-05;
+                            var f = -9.054E-08;
+                            }
+                            return this.big3Total * (500 / (a + (b * this.bodyWeight) + (c * Math.pow(this.bodyWeight, 2)) + (d * Math.pow(
+                                    this.bodyWeight, 3)) + (e * Math.pow(this.bodyWeight, 4)) + (f * Math.pow(this.bodyWeight, 5))));
+                        }
+                    }
+                }),
+
+
+                new Vue({
+                el:'#oneRepMax',
+                data : {
+                        Title:'Fitness Calculators',
+                        weightLifted : '',
+                        reps: '',
+                     
+                 },
+                computed: {
+                       
+                        result: function(){
+                        return this.weightLifted * (1 + (this.reps / 30));
+                        }
+                    }
+            });
+                    </script>
+
+     
+
+
+
+
+    <!-- <div id="app">
+        <div class="wrapper" v-bind:style="bgc">
+            <input type="text" v-on:input="bgc.backgroundColor = $event.target.value" />
+            <div id="calculators">
+                <h1>Lifting Calculators</h1>
+                <hr>
+                <div id="max">
+
+                    <h2>Estimate One Rep Max</h2>
+                    <input id="weightLifted" type="text" placeholder="Weight Lifted">
+                    <input id="numberOfReps" type="text" placeholder="Number of Reps">
+                    <br>
+                    <button onclick="max()">Calculate</button>
+                    <p id="output"> </p>
+                </div>
+            </div>
+        </div>
+        <div id="wilks">
+            <h2>Calculate Wilks Score</h2>
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+
+            </select>
+            <br>
+            <input id="big3Total" type="text" placeholder="Big 3 Total">
+            <input id="bodyWeight" type="text" name="" placeholder="Bodyweight in Lbs">
+            <br>
+            <button onclick="wilks()">Calculate</button>
+            <p id="wilksScore"></p>
+
+        </div>
     </div>
 
-    <div id="wilks">
-        <select id="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            
-        </select>
-        <br>
-        <input id="big3Total" type="text" placeholder="Big 3 Total">
-        <input id="bodyWeight" type="text" name="" placeholder="Bodyweight in Lbs">
-        <button onclick="wilks()">Calculate</button>
-        <p id="wilksScore"></p>
-        
-    </div>
 
     <script>
-
-
-        
         function max() {
             var weightLifted = document.getElementById('weightLifted').value;
             var numberOfReps = document.getElementById('numberOfReps').value;
@@ -47,8 +147,8 @@
 
 
         function wilks() {
-           var gender = document.getElementById('gender').value;
-            if ( gender == 'male') {
+            var gender = document.getElementById('gender').value;
+            if (gender == 'male') {
                 a = -216.0475144;
                 b = 16.2606339;
                 c = -0.002388645;
@@ -66,16 +166,31 @@
 
             var big3Total = document.getElementById('big3Total').value * 0.453592;
             var bodyWeight = document.getElementById('bodyWeight').value * 0.453592;
-            var wilks = big3Total * (500 / (a + (b * bodyWeight) + (c * Math.pow(bodyWeight, 2)) + (d * Math.pow(bodyWeight, 3)) + (e * Math.pow(bodyWeight, 4)) + (f * Math.pow(bodyWeight, 5))));
+            var wilks = big3Total * (500 / (a + (b * bodyWeight) + (c * Math.pow(bodyWeight, 2)) + (d * Math.pow(
+                bodyWeight, 3)) + (e * Math.pow(bodyWeight, 4)) + (f * Math.pow(bodyWeight, 5))));
             document.getElementById('wilksScore').innerHTML = "Your Wilks score is: " + wilks.toFixed(2);
 
         }
-        function bmr(){
+
+        function bmr() {
+
 
         }
     </script>
 
-
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                description: 'Type any colour name, rgb, hex or hsl in the input below and see what happens!',
+                bgc: {
+                    backgroundColor: ''
+                   
+                }
+            }
+        })
+    </script>
+ -->
 
 </body>
 

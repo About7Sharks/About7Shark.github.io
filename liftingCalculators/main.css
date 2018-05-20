@@ -1,0 +1,28 @@
+body{
+    margin: 0 auto;
+}
+#calculators{
+    margin: 0 auto; 
+    width: 320px;
+    text-align: center;
+}
+#max{
+    margin: 0 auto;
+    width: 320px;
+    text-align: center;
+}
+#wilks, #oneRepMax{
+    margin: 0 auto;
+    width: 320px;
+    text-align: center;
+}
+input{
+    width: 320px;
+}
+#max button, #wilks button{
+    margin: 0 auto;
+    width: 320px;
+ 
+}
+
+	
