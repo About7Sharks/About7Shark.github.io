@@ -8,7 +8,7 @@ body {
     position: absolute;
     z-index: -1;
     background: rgb(1, 1, 16);
-    height: 3050px;
+    height: 200em;
     width: 100%;
 }
 .navbar {
@@ -75,7 +75,7 @@ ul {
     font-size: 28px;
     text-align: center;
      font-family: 'Open Sans' , sans-serif;
-     max-width: 400px;
+     max-width: 320px;
      position: relative;
      align-content: center;
      /* background: rgba(7, 12, 19, 0.5); */
@@ -84,9 +84,9 @@ ul {
 
 #moonLeft {
   
-    min-width: 400px;
+    min-width: 320px;
     float: left;
-    padding-left:6px;
+    padding:30px;
 }
 #skills{
     margin: auto;
@@ -124,4 +124,12 @@ ul {
 #wilks{
     margin-left: 35%;
     margin-right: 35%;
+}
+@media only screen and (max-width: 600px)
+{
+#particles-js {
+    
+    height: 300em;
+    
+}
 }
