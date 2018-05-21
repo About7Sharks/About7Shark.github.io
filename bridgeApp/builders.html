@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Builders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
+    <!-- video player -->
+    <!-- Include stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/video.js@6.6.2/dist/video-js.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vue-video-player@5.0.0/src/custom-theme.css" rel="stylesheet">
+    <!-- Include the videojs library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.6.2/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- videojs JS Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue-video-player@5.0.0/dist/vue-video-player.js"></script>
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    </script>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+    <script src="https://js.stripe.com/v3/"></script>
+    
+</head>
+
+<body>
+    <nav class="header">
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <img src="assets/contestLogo.png" alt="">
+                    <br> BE THE MOVEMENT</a>
+            </li>
+            <li>
+                <a href="contestLeaderBoard.html">
+                    <img src="assets/leaderboardLogo.png" alt="">
+                    <br>U.S.A LEADERBOARD</a>
+            </li>
+            <li>
+                <a href="feed.html">
+                    <img src="assets/socialLogo.png" alt="">
+                    <br> THE FEED</a>
+            </li>
+        </ul>
+        
+    </nav>
+    <div id="particles-js"></div><div id="mediaBar">
+   
+        <ul> 
+          <li>
+              <a href="">
+                  <img height="32" width="32" src="https://unpkg.com/simple-icons@latest/icons/youtube.svg" />
+              </a>
+          </li>
+          <li>
+            <a href="">
+              <img height="32" width="32" src="https://unpkg.com/simple-icons@latest/icons/twitter.svg" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img height="32" width="32" src="https://unpkg.com/simple-icons@latest/icons/instagram.svg" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img height="32" width="32" src="https://unpkg.com/simple-icons@latest/icons/linkedin.svg" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img height="32" width="32" src="https://unpkg.com/simple-icons@latest/icons/snapchat.svg" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img height="32" width="32" src="https://unpkg.com/simple-icons@latest/icons/facebook.svg" />
+            </a>
+          </li>
+          <div id="mediaLeft">
+         <h3>Powered by <img  height="32" width="32" src="assets/Asset 7.png" alt=""> BRIDGE</li></h3></div>
+        </ul>
+      </div>
+<div id="content"> 
+
+
+    <div id="theBuilders">
+    
+        <h1>The Benefits of Becoming a Builder</h1>
+        <br>
+        <h2>The Builders Program will provide subscribes access to :</h2>
+        <div id="buildersAccessList">
+            <ul>
+                <li>Workshops</li>
+                <li>Industy Forums</li>
+                <li>White Papers</li>
+                <li>Educational Opportunities</li>
+                <li>Focus Groups</li>
+                <li>Live Q&A with BRIDGE Expert</li>
+                <li>Digital Archive</li>
+            </ul>
+        </div>
+
+        <h3>AND MUCH MORE!</h3>
+        <h2>The Builder's Program brings actionable, relevent, and practical information to expand your business ecosystem and
+            redefine your customer's experience</h2>
+        <div id="builders1">
+          <h4>  BUILD WITH US FOR AN INTRODUCTORY PRICE OF $5000</h4>  </div>
+       
+
+        <script src="https://js.stripe.com/v3/"></script>
+
+        <form action="/charge" method="post" id="payment-form">
+            <div class="form-row">
+                <label for="card-element">
+                    Credit or debit card
+                </label>
+                <div id="card-element">
+                    <!-- A Stripe Element will be inserted here. -->
+                </div>
+
+                <!-- Used to display form errors. -->
+                <div id="card-errors" role="alert"></div>
+            </div>
+
+           <button>Submit Payment</button>
+        </form>
+
+    </div>
+        <nav class="footer">
+            <ul>
+                <li>
+                    <a href="builders.html">
+                        <img src="assets/buildersLogo.png" alt="">
+                        <br> THE BUILDERS</a>
+                </li>
+                <li>
+                    <a href="aboutBridge.html">
+                        <img src="assets/aboutBridgeLogo.png" alt="">
+                        <br> ABOUT BRIDGE</a>
+                </li>
+                <li>
+                    <a href="bridgeCommunities.html">
+                        <img src="assets/communitiesLogo.svg" width="" alt="">
+                        <br> BRIDGE COMMUNITIES</a>
+                </li>
+            </ul>
+        </nav>
+
+
+
+
+
+
+        <!-- particles.js package and load function -->
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
+        <script>
+            particlesJS.load('particles-js', 'particles.json', function () {
+                console.log('partilcles.json loaded...');
+            });
+        </script>
+
+
+<script src="stripeForm.js"></script>
+
+</body>
+
+</html>
